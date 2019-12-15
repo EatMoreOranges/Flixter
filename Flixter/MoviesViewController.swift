@@ -70,11 +70,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        //let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
+        // helps to save memory by reusing cells off screen
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
-//        cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
-        cell.textLabel!.text = title // WE HAVE LIFT OFF!!!!
+// 1st       cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
+// 2nd       cell.textLabel!.text = title // WE HAVE LIFT OFF!!!! for title names
+        cell.titleLabel.text = title
         return cell
     }
 
