@@ -75,9 +75,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // helps to save memory by reusing cells off screen
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
-// 1st       cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
-// 2nd       cell.textLabel!.text = title // WE HAVE LIFT OFF!!!! for title names
+        let synopsis = movie["overview"] as! String
+// 1st edit -->     cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
+// 2nd edit -->      cell.textLabel!.text = title // WE HAVE LIFT OFF!!!! for title names
         cell.titleLabel.text = title
+        
+        cell.synopsisLabel.text = synopsis
         return cell
     }
 
