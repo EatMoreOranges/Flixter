@@ -8,18 +8,29 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    // TableVeiw Recipe_Step 1:
+    // added UITablViewDataSource & UITableViewDelegate ... lets the veiwControler work with the table view
+    //and clicked fix (added tableView functions)
+
+
+
+    @IBOutlet weak var TableView: UITableView!
+    
+//---------------------------------------------
 // vars created up here are called Properties
 // Properties are available for the "life time of the screen"
-    
     var movies = [[String:Any]]()
-    
     // This is an array of dictionaries
     // [keyType:valueType]
     // () = creation of something
-    
+//---------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   //TableVeiw Recipe_Step 3: add these things
+        TableView.dataSource = self
+        TableView.delegate = self
         
 //        The power of APIs
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
@@ -37,17 +48,35 @@ class MoviesViewController: UIViewController {
             self.movies = dataDictionary["results"] as! [[String:Any]]
             //"as! blah blah..." is casting
             // had a problem and clicked fix and it added "self."
+            
+            
+            //TableVeiw Recipe_Step 4: Reload data
+            self.TableView.reloadData() // makes sure the table actually gets the data from the Tableview functions
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
 
+            
+            
            }
         }
         task.resume()
 
         // Do any additional setup after loading the view.
     }
+    //TableVeiw Recipe_Step 2: (create these functions)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count // it wants the number of rows
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let movie = movies[indexPath.row]
+        let title = movie["title"] as! String
+//        cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
+        cell.textLabel!.text = title // WE HAVE LIFT OFF!!!!
+        return cell
+    }
 
     /*
     // MARK: - Navigation
