@@ -52,6 +52,7 @@
                                             <outlet property="posterView" destination="VFI-d5-pGu" id="3Za-Hj-PtX"/>
                                             <outlet property="synopsisLabel" destination="fxX-q4-vZY" id="Opx-Zm-NpS"/>
                                             <outlet property="titleLabel" destination="VJc-vo-uPu" id="epz-sO-APk"/>
+                                            <segue destination="gzb-cQ-S4K" kind="show" id="qCs-I2-PfH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -68,6 +69,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="129.08545727136433"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="VHG-2H-aCg">
+            <objects>
+                <viewController id="gzb-cQ-S4K" customClass="MovieDetailsViewController" customModule="Flixter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBc-jE-THt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Ew-Be-u8r"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f6L-0b-6dP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vst-Fh-8Tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OPM-PA-CtT">
