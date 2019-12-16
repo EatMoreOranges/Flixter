@@ -102,6 +102,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Find the selected movie
         let cell = sender as! UITableViewCell
         let indexPath = TableView.indexPath(for: cell)! // had some real issues with this this "TableView"/---/ go back to navigation and parsing data video in week 2
+        /*  https://stackoverflow.com/questions/40164244/ambiguous-reference-to-member-tableview-numberofrowsinsection-why-this-err */
         
         let movie =  movies[indexPath.row]
         //Pass the selected movies to the detail controller
@@ -115,6 +116,5 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-//    completedCaseTableView.indexPathForSelectedRow
 
 }
