@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage //used coco pods to get this library in my workspace
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // TableVeiw Recipe_Step 1:
@@ -79,8 +80,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 // 1st edit -->     cell.textLabel!.text = "row: \(indexPath.row)"  // "...\()" = special formula for turning vars to strings //i clicked fix
 // 2nd edit -->      cell.textLabel!.text = title // WE HAVE LIFT OFF!!!! for title names
         cell.titleLabel.text = title
-        
         cell.synopsisLabel.text = synopsis
+        
+//        Movie API documentation https://developers.themoviedb.org/3/getting-started/images
+        let baseURL = "https://image.tmdb.org/t/p/w185"
+        let poster_path = movie["poster_path"] as! String
+        let poster_URL = URL(string: baseURL + poster_path)!
+        
+        cell.posterView.af_setImage(withURL: poster_URL)
+        
         return cell
     }
 
