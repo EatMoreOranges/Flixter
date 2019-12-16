@@ -45,7 +45,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 //        print("hello")
             
-            print(dataDictionary)
+//            print(dataDictionary)
             self.movies = dataDictionary["results"] as! [[String:Any]]
             //"as! blah blah..." is casting
             // had a problem and clicked fix and it added "self."
@@ -81,25 +81,40 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 // 2nd edit -->      cell.textLabel!.text = title // WE HAVE LIFT OFF!!!! for title names
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
-        
 //        Movie API documentation https://developers.themoviedb.org/3/getting-started/images
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let poster_path = movie["poster_path"] as! String
         let poster_URL = URL(string: baseURL + poster_path)!
         
         cell.posterView.af_setImage(withURL: poster_URL)
-        
         return cell
     }
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        print("Loading up details screen")
+        
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = TableView.indexPath(for: cell)! // had some real issues with this this "TableView"/---/ go back to navigation and parsing data video in week 2
+        
+        let movie =  movies[indexPath.row]
+        //Pass the selected movies to the detail controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        // automatically unselects the move in the list after clicking it
+        TableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        
     }
-    */
+    
+//    completedCaseTableView.indexPathForSelectedRow
 
 }

@@ -10,10 +10,15 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
 
+    
+    var movie: [String:Any]! // != swift optionals... look it up
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        print(movie["title"])
     }
     
 
