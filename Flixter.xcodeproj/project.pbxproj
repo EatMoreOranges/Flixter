@@ -20,6 +20,7 @@
 		D16436DF23A6610F009AEAE7 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16436DE23A6610F009AEAE7 /* MoviesViewController.swift */; };
 		D16436E123A67586009AEAE7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16436E023A67586009AEAE7 /* MovieCell.swift */; };
 		D1EBF80B23A82AA700222994 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */; };
+		D1EBF80D23A879C700222994 /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBF80C23A879C700222994 /* MovieGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D16436DE23A6610F009AEAE7 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		D16436E023A67586009AEAE7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		D1EBF80C23A879C700222994 /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				D16436BC23A6600B009AEAE7 /* Info.plist */,
 				D16436DE23A6610F009AEAE7 /* MoviesViewController.swift */,
 				D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */,
+				D1EBF80C23A879C700222994 /* MovieGridViewController.swift */,
 			);
 			path = Flixter;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				D16436B123A66008009AEAE7 /* SceneDelegate.swift in Sources */,
 				D16436E123A67586009AEAE7 /* MovieCell.swift in Sources */,
 				D16436DF23A6610F009AEAE7 /* MoviesViewController.swift in Sources */,
+				D1EBF80D23A879C700222994 /* MovieGridViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
