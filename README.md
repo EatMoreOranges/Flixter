@@ -12,7 +12,7 @@
 
 ### App Walkthough GIF
 
-<img src="https://recordit.co/sELiAV0gh5" width=250><br>
+<img src="http://g.recordit.co/AbR22AYaje.gif" width=250><br>
 
 ### Notes
 Knowing when to move on from trying to fix a “bug” that’s not an immediate priority was a lesson I had to learn while building this app. A large portion of my time went into trying to fix the issue and that is not always the best approach to take.
