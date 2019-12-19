@@ -21,6 +21,7 @@
 		D16436E123A67586009AEAE7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16436E023A67586009AEAE7 /* MovieCell.swift */; };
 		D1EBF80B23A82AA700222994 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */; };
 		D1EBF80D23A879C700222994 /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBF80C23A879C700222994 /* MovieGridViewController.swift */; };
+		D1EBF81323AB0DBE00222994 /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBF81223AB0DBE00222994 /* MovieGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D16436E023A67586009AEAE7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		D1EBF80C23A879C700222994 /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		D1EBF81223AB0DBE00222994 /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,16 +147,17 @@
 		D16436AD23A66008009AEAE7 /* Flixter */ = {
 			isa = PBXGroup;
 			children = (
+				D16436B423A66008009AEAE7 /* Main.storyboard */,
 				D16436AE23A66008009AEAE7 /* AppDelegate.swift */,
 				D16436B023A66008009AEAE7 /* SceneDelegate.swift */,
-				D16436B423A66008009AEAE7 /* Main.storyboard */,
-				D16436E023A67586009AEAE7 /* MovieCell.swift */,
 				D16436B723A6600B009AEAE7 /* Assets.xcassets */,
 				D16436B923A6600B009AEAE7 /* LaunchScreen.storyboard */,
 				D16436BC23A6600B009AEAE7 /* Info.plist */,
+				D16436E023A67586009AEAE7 /* MovieCell.swift */,
 				D16436DE23A6610F009AEAE7 /* MoviesViewController.swift */,
 				D1EBF80A23A82AA700222994 /* MovieDetailsViewController.swift */,
 				D1EBF80C23A879C700222994 /* MovieGridViewController.swift */,
+				D1EBF81223AB0DBE00222994 /* MovieGridCell.swift */,
 			);
 			path = Flixter;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				D16436E123A67586009AEAE7 /* MovieCell.swift in Sources */,
 				D16436DF23A6610F009AEAE7 /* MoviesViewController.swift in Sources */,
 				D1EBF80D23A879C700222994 /* MovieGridViewController.swift in Sources */,
+				D1EBF81323AB0DBE00222994 /* MovieGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
